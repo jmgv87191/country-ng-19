@@ -1,6 +1,8 @@
 import { Routes } from '@angular/router';
 import { ByCapitalPageComponent } from './pages/by-capital-page/by-capital-page.component';
 import { CountryLayoutComponent } from './layouts/country-layout/country-layout.component';
+import { ByCountryPageComponent } from './pages/by-country-page/by-country-page.component';
+import { ByRegionComponent } from './pages/by-region/by-region.component';
 
 export  const countryRoutes: Routes = [
 
@@ -14,7 +16,11 @@ export  const countryRoutes: Routes = [
             },
             {
                 path:'by-country',
-                component: ByCapitalPageComponent
+                component: ByCountryPageComponent
+            },
+            {
+                path:'by-region',
+                component: ByRegionComponent
             },
             {
                 path:'**',
