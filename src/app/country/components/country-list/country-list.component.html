@@ -14,12 +14,26 @@
         </thead>
 
         <tbody>
-            <tr>
-                <th>1</th>
-                <td>Cy Ganderton</td>
-                <td>Quality Control Specialist</td>
-                <td>Blue</td>
-            </tr>
+
+            @for (item of countries(); track item.cca2; let index = $index) {
+
+                <tr>
+                    <th> {{ index + 1 }} </th>
+                    <td> {{ item.flag }} </td>
+                    <td> 
+                        <img class="w-10" [src]="item.flagSvg" [alt]="item.name">
+                    </td>
+                    <td>
+                        {{ item.name }}
+                    </td>
+                    <td> {{ item.capital }} </td>
+                    <td> {{ item.population }} </td>
+                    <td>
+                        <a  class="link-primary cursor-pointer"> Mas informacion </a>
+                    </td>
+                </tr>
+            }
+
         
         </tbody>
 
